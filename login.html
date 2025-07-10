@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+        * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-color: brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container {
+        background-color: white;
+        padding: 2rem;
+        border-radius: 50px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 450px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 30px;
+        margin-top: 1px;
+    }
+
+    .campo {
+        margin-bottom: 1.2rem;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+
+    input {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: border-color 0.3, box-shadow 0.3;
+    }
+
+    input.invalido {
+        border-color: red;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+    }
+
+    input:focus {
+        outline: none;
+        border-color: #4169e1;
+        box-shadow: 0 0 8px rgba(76, 100, 175, 0.4);
+    }
+
+    .erro {
+        color: red;
+        font-size: 1rem;
+        margin-top: 0.3rem;
+        display: none;
+    }
+
+    input.invalido {
+        border-color: red;
+    }
+
+    button {
+        font-size: 20px;
+        width: 100%;
+        padding: 0.8rem;
+        background: #4CAF50;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+        cursor: pointer;
+        transition: background 0.5s box-shadow 0.5s;
+    }
+    button:hover {
+        background: #43a047;
+        box-shadow: 0 6px 16px rgba(76, 175, 80, 0.4);
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form id="form-login">
+        <div class="campo">
+          <label for="login-email">E-mail</label>
+          <input type="email" id="login-email" required />
+          <small class="erro"></small>
+        </div>
+        <div class="campo">
+          <label for="login-senha">Senha</label>
+          <input type="password" id="login-senha" required />
+          <small class="erro"></small>
+        </div>
+        <button type="submit">Entrar</button>
+      </form>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
